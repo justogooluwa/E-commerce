@@ -46,9 +46,6 @@ function Layout() {
   const addToCart = () => {
     if (count > 0) {
       setCartItems(prevCartItems => prevCartItems + count);
-      setCount(0);
-     
-
     } else {
      
     }
@@ -129,7 +126,7 @@ function Layout() {
                       <p className="cart-heading">Cart</p>
                       <div className="divider"></div>
                       <div className="cart-content empty">
-                        <p>Your cart is empty</p>
+                        <p>Your cart is empty.</p>
                       </div>
                     </div>
                     )}

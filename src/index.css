@@ -291,6 +291,11 @@ nav{
 .amount{
     font-weight: 700;
 }
+.cart-content{
+  margin-top: 25%;
+  color: hsl(219, 9%, 45%);
+  font-weight: 700;
+}
 .add-btn{
     cursor: pointer;
   width: 65%;
@@ -373,6 +378,7 @@ nav{
     }
     .close-btn {
       cursor: pointer;
+      display: block;
     }
     .overlay {
       position: absolute;
@@ -386,6 +392,21 @@ nav{
       opacity: 75%;
       display: none;
     }
+    .cart-container {
+      position: relative;
+    }
+    .cart-wrp {
+      position: absolute;
+      left: -348px;
+      top: 60px;
+      z-index: 30;
+      width: 420px;
+      height: 300px;
+      background-color: hsl(0, 0%, 100%);
+      box-shadow: 0px 0px 15px 0px #000000;
+      border-radius: 10px;
+    }
+    
     .nav_links {
       position: absolute;
       top: 0;
@@ -428,6 +449,11 @@ nav{
     }
     .thumbnails {
       height: 40%;
+    }
+    .cart-content{
+      margin-top: 25%;
+      color: hsl(219, 9%, 45%);
+      font-weight: 700;
     }
     .content {
       margin: 2rem;
