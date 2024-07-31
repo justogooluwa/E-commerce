@@ -28,9 +28,9 @@ function Layout() {
   }
 
   
-  const [count, setCount] = useState<number>(0);
-  const [cartItems, setCartItems] = useState<number>(0); 
-  const [cartOpen, setCartOpen] = useState<boolean>(false)
+  const [count, setCount] = useState(0);
+  const [cartItems, setCartItems] = useState(0); 
+  const [cartOpen, setCartOpen] = useState(false)
   const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
   // Increment item count
   const increment = () => {
