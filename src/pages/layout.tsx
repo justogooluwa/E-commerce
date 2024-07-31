@@ -126,7 +126,7 @@ function Layout() {
                       <p className="cart-heading">Cart</p>
                       <div className="divider"></div>
                       <div className="cart-content empty">
-                        <p>Your cart is empty.</p>
+                        <p className="cartt">Your cart is empty.</p>
                       </div>
                     </div>
                     )}

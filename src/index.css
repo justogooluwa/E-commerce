@@ -291,7 +291,7 @@ nav{
 .amount{
     font-weight: 700;
 }
-.cart-content{
+.cartt{
   margin-top: 25%;
   color: hsl(219, 9%, 45%);
   font-weight: 700;
@@ -392,10 +392,6 @@ nav{
       opacity: 75%;
       display: none;
     }
-    .cart-container {
-      position: relative;
-    }
-
     
     .nav_links {
       position: absolute;
@@ -440,7 +436,7 @@ nav{
     .thumbnails {
       height: 40%;
     }
-    .cart-content{
+    .cartt{
       margin-top: 25%;
       color: hsl(219, 9%, 45%);
       font-weight: 700;
