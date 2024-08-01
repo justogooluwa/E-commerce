@@ -32,12 +32,26 @@ function Layout() {
   const [cartItems, setCartItems] = useState(0); 
   const [cartOpen, setCartOpen] = useState(false)
   const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
-  // Increment item count
-  const increment = () => {
-    setCount(prevCount => prevCount + 1);
+  const [currentThumbnail, setCurrentThumbnail] = useState(0);
+  const thumbnails = [thumbnail1, thumbnail2, thumbnail3, thumbnail4];
+
+  const showNextThumbnail = () => {
+    setCurrentThumbnail((prev) => (prev + 1) % thumbnails.length);
   };
 
-  // Decrement item count
+  const showPreviousThumbnail = () => {
+    setCurrentThumbnail(
+      (prev) => (prev - 1 + thumbnails.length) % thumbnails.length
+    );
+  };
+
+ 
+  const increment = () => {
+    setCount(prevCount => prevCount + 1);
+    
+  };
+
+ 
   const decrement = () => {
     if (count > 0) {
       setCount(prevCount => prevCount - 1);
@@ -46,9 +60,7 @@ function Layout() {
   const addToCart = () => {
     if (count > 0) {
       setCartItems(prevCartItems => prevCartItems + count);
-    } else {
-     
-    }
+    } 
   };
 
   const clearCart = () => {
@@ -59,6 +71,7 @@ function Layout() {
     setCartOpen(prev => !prev);
   };
 
+ 
   
   
   const pricePerItem = 125;
@@ -74,7 +87,7 @@ function Layout() {
           {
             openMenu ?(
              
-              <img src={close} alt="" className="close-btn hidden" onClick={closeOpenMenu}/>
+              <img src={close} alt="" className="hidden close-btn" onClick={closeOpenMenu}/>
             ):
             (
               <img src={menu} alt=""  className="hidden menu" onClick={handOpenMenu}/>
@@ -138,20 +151,28 @@ function Layout() {
           </div>
         </nav>
         <main>
-          <section className="thumbnails">
+        <section className="thumbnails">
           <img src={product1} alt="" className="main-thumbnails invisible-mob" />
           <div className="mobile-thumb hidden">
-            <img src={product1} alt="" className="thumb-mob" />
-            <button id="next"><img src={next} alt="" /></button>
-            <button id="previous"><img src={previous} alt="" /></button>
+            <img
+              src={thumbnails[currentThumbnail]}
+              alt=""
+              className="thumb-mob"
+            />
+            <button id="next" onClick={showNextThumbnail}>
+              <img src={next} alt="Next" />
+            </button>
+            <button id="previous" onClick={showPreviousThumbnail}>
+              <img src={previous} alt="Previous" />
+            </button>
           </div>
           <div className="preview">
-           <img src={thumbnail1} alt="" className="selected"/>
-           <img src={thumbnail2} alt="" />
-           <img src={thumbnail3} alt="" />
-           <img src={thumbnail4} alt="" />
+            <img src={thumbnail1} alt="" className="selected"/>
+            <img src={thumbnail2} alt="" />
+            <img src={thumbnail3} alt="" />
+            <img src={thumbnail4} alt="" />
           </div>
-          </section>
+        </section>
           <section className="content">
             <p className="company">Sneaker Company </p>
             <h1 className="title">Fall Limited Edition Sneakers</h1>

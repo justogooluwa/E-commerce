@@ -21,6 +21,7 @@ img{
 .hidden{
     display: none;
 }
+
 .invisible{
     display: none;
 }
@@ -197,11 +198,13 @@ nav{
     display: flex;
     flex-direction: column;
   }
+  
   .main-thumbnails{
     border-radius: 10px;
     width: 100%;
     cursor: pointer;
   }
+  
   .preview{
     display: flex;
     gap: 1rem;
@@ -318,40 +321,7 @@ nav{
   .add-btn img {
     filter: brightness(5);
   }
-  /* .lightbox {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .lightbox-container {
-    position: relative;
-  }
-  .close-lightbox {
-    position: absolute;
-    top: -40px;
-    right: 10px;
-    color: orange;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  .close-lightbox:hover img {
-    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
-  }
-  .close-lightbox img {
-    width: 20px;
-    height: 20px;
-  }
-  .lightbox .main-thumbnail {
-    width: 400px;
-  } */
+  
    
 @media screen and (max-width: 700px) {
     /* visibility actions */
@@ -392,7 +362,6 @@ nav{
       opacity: 75%;
       display: none;
     }
-    
     .nav_links {
       position: absolute;
       top: 0;
@@ -461,6 +430,7 @@ nav{
       width: 100%;
       z-index: 1;
     }
+    
     .title {
       font-size: 2.2rem;
     }
