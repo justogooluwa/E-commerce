@@ -22,8 +22,8 @@ img{
     display: none;
 }
 
-.invisible{
-    display: none;
+.invisible {
+  display: none !important;
 }
 nav{
     height: 80px;
@@ -348,7 +348,9 @@ nav{
     }
     .close-btn {
       cursor: pointer;
-      display: block;
+      z-index: 2000;
+      margin-bottom: 50px;
+      margin-left: 15px;
     }
     .overlay {
       position: absolute;

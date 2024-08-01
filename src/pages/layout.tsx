@@ -81,7 +81,7 @@ function Layout() {
     <>
     <div className="container">
     {/* navbar */}
-      <nav className="navbar">
+      <nav >
       <div className="nav-container">
         <div className="nav_left-sec">
           {
